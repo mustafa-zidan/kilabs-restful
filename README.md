@@ -56,7 +56,7 @@ or simply run
 ## Accessing the app
 You can access the app using any of the JSON client using the url `/v1`
 
-###CRUD for employees
+### CRUD for employees
 Both employees and candidates has the same properties:
 * first name
 * last name
@@ -74,7 +74,7 @@ All CRUD operations for the employees managed under `employees resource`
 
 > The same goes for Candidates under the resource `candidates`
 
-###Submit availability
+### Submit availability
 Expected availability model is as follows:
 
 * day: Day of the next week to submit the availability Available Values are `SATURDAY,SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY`
@@ -88,7 +88,7 @@ Submitting availability would be done under `/v1/<resource>/submit-availability`
 * candidates
 
 
-###Interview Matching
+### Interview Matching
 Getting available times for interview is done by sending a `GET` request to the URI `/v1/candidates/{id}/possible-interview-times?interviewers={id1}&&interviewer={id2}..`
 it will return employees submitted time slots that matches the available time slots for this candidate.
 
