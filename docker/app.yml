@@ -1,0 +1,14 @@
+version: '2'
+services:
+    restful-app:
+        image: kilabs/restful
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://restful-postgresql:5432/kilabs
+            - SPRING_DATASOURCE_USERNAME=kilabs
+            - SPRING_DATASOURCE_PASSWORD=kilabs-password
+        ports:
+            - 8080:8080
+    restful-postgresql:
+        extends:
+            file: postgres.yml
+            service: restful-postgresql
